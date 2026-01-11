@@ -104,13 +104,17 @@ function App() {
   };
 
   const handlePasscodeSubmit = () => {
-    if (passcodeInput.toLowerCase() === config.passcodeAnswer.toLowerCase()) {
-      setIsUnlocked(true);
-      setTimeout(() => setCurrentPage('landing'), 500);
-    } else {
-      setPasscodeInput('');
-      alert('Not quite... think about what I always call you 💕');
-    }
+     // Remove spaces, hyphens, and convert to lowercase
+  const cleanInput = passcodeInput.toLowerCase().replace(/[\s-]/g, '');
+  const cleanAnswer = config.passcodeAnswer.toLowerCase().replace(/[\s-]/g, '');
+  
+  if (cleanInput === cleanAnswer) {
+    setIsUnlocked(true);
+    setTimeout(() => setCurrentPage('landing'), 500);
+  } else {
+    setPasscodeInput('');
+    alert('Not quite... think about it more 💕');
+  }
   };
 
   const MomentCard = ({ moment, index }) => {
@@ -197,13 +201,13 @@ function App() {
             <div className="text-center mb-8">
               <Heart className="w-16 h-16 text-pink-500 mx-auto mb-4 animate-pulse" />
               <h1 className="text-3xl font-bold bg-gradient-to-r from-pink-500 to-rose-500 bg-clip-text text-transparent mb-2">Our Year</h1>
-              <p className="text-gray-600">A journey through our story</p>
+              <p className="text-gray-600">A journey through our year</p>
             </div>
             
             <div className="space-y-4">
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
-                  What do I call you when you make me smile? 💕
+                  What do I have your name saved as?💕
                 </label>
                 <input
                   type="text"
@@ -219,12 +223,12 @@ function App() {
                 onClick={handlePasscodeSubmit}
                 className="w-full bg-gradient-to-r from-pink-400 to-rose-400 text-white py-3 rounded-xl font-semibold hover:from-pink-500 hover:to-rose-500 transition-all transform hover:scale-105 shadow-lg"
               >
-                Enter Our World
+                Enter Our Year
               </button>
             </div>
 
             <p className="text-center text-sm text-gray-500 mt-6">
-              Made with 💕 just for you
+              Made just for you 💕
             </p>
           </div>
         </div>

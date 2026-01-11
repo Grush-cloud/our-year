@@ -1,6 +1,6 @@
 export const config = {
-  passcodeAnswer: "sunshine",
-  relationshipStartDate: "2024-01-15",
-  yourName: "Me",
-  herName: "You"
+  passcodeAnswer: "asageorge",
+  relationshipStartDate: "2025-01-13",
+  yourName: "Grace's Nwoke",
+  herName: "Asa George"
 };
