@@ -63,7 +63,7 @@ function App() {
     const userMessage = { type: 'user', text: chatInput };
     const newMessages = [...chatMessages, userMessage];
 
-    let botResponse = "Hmm, I'm not sure about that. Try asking me about my favorite memory, why I love you, or what makes me smile! 💕";
+    let botResponse = "Hmm, I'm not sure about that. Try asking me about my favorite memory, favorite date, or my first impression! 💕";
     
     const lowerInput = chatInput.toLowerCase();
     for (const key of Object.keys(chatbotResponses)) {
@@ -263,9 +263,9 @@ function App() {
             </h1>
             
             <div className="space-y-4 text-lg text-gray-700 leading-relaxed mb-8">
-              <p>Everything changed. ✨</p>
-              <p>I met someone who turned my world upside down in the best way possible.</p>
-              <p>Someone who makes me laugh until my stomach hurts, who understands my silence, who dances with me in parking lots and kitchen floors.</p>
+              <p>Grace and George Started✨</p>
+              <p>Days turned into memories, memories that cannot be forgotten.</p>
+              <p>I met someone who made things better than they were. In the small ways. In the everyday parts.</p>
               <p className="text-2xl font-semibold text-pink-600">I met you. 💕</p>
             </div>
 
@@ -361,7 +361,7 @@ function App() {
           <div className="text-center mb-16">
             <Laugh className="w-16 h-16 text-pink-500 mx-auto mb-4" />
             <h2 className="text-4xl font-bold text-gray-800 mb-4">Our Inside Jokes Encyclopedia</h2>
-            <p className="text-gray-600 text-lg">The moments that make us laugh until we cry 😂</p>
+            <p className="text-gray-600 text-lg">Funny moments only we understand</p>
           </div>
 
           <div className="grid gap-6">
@@ -374,7 +374,7 @@ function App() {
                 <div className="flex justify-between items-start mb-4">
                   <div>
                     <h3 className="text-2xl font-bold text-gray-800 mb-2">{joke.title}</h3>
-                    <p className="text-sm text-pink-600 font-medium">{joke.date}</p>
+                    
                   </div>
                   <div className="flex gap-2">
                     <span className="px-3 py-1 bg-pink-100 text-pink-600 rounded-full text-sm font-medium">
@@ -407,9 +407,7 @@ function App() {
               
               <div className="space-y-4 mb-6">
                 <div className="flex gap-4">
-                  <span className="px-4 py-2 bg-pink-100 text-pink-600 rounded-full text-sm font-medium">
-                    📅 {selectedJoke.date}
-                  </span>
+                 
                   <span className="px-4 py-2 bg-rose-100 text-rose-600 rounded-full text-sm font-medium">
                     🔄 Used {selectedJoke.frequency}
                   </span>
@@ -429,7 +427,7 @@ function App() {
 
   // PUZZLE PAGE
   if (currentPage === 'puzzle') {
-    const puzzleImage = "https://images.unsplash.com/photo-1518568814500-bf0f8d125f46?w=800&h=800&fit=crop";
+    const puzzleImage = "/ghili.png";
     
     return (
       <div className="min-h-screen bg-gradient-to-br from-pink-50 via-rose-50 to-pink-100">
@@ -460,23 +458,24 @@ function App() {
 
           {!puzzleComplete ? (
             <div className="bg-white p-8 rounded-3xl shadow-xl border-4 border-pink-200">
-              <div className="grid grid-cols-4 gap-2 max-w-2xl mx-auto">
-                {puzzlePieces.sort((a, b) => a.currentPosition - b.currentPosition).map((piece) => (
-                  <div
-                    key={piece.id}
-                    onClick={() => handlePieceClick(piece)}
-                    className={`aspect-square cursor-pointer transition-all transform hover:scale-105 border-2 rounded-lg overflow-hidden ${
-                      selectedPiece?.id === piece.id ? 'border-pink-500 scale-105 shadow-lg' : 'border-pink-200'
-                    }`}
-                    style={{
-                      backgroundImage: `url(${puzzleImage})`,
-                      backgroundSize: '400%',
-                      backgroundPosition: `${(piece.correctPosition % 4) * 33.33}% ${Math.floor(piece.correctPosition / 4) * 33.33}%`
-                    }}
-                  >
-                  </div>
-                ))}
-              </div>
+              <div className="grid grid-cols-4 gap-2 max-w-xl mx-auto">
+  {puzzlePieces.sort((a, b) => a.currentPosition - b.currentPosition).map((piece) => (
+    <div
+      key={piece.id}
+      onClick={() => handlePieceClick(piece)}
+      className={`cursor-pointer transition-all transform hover:scale-105 border-2 rounded-lg overflow-hidden ${
+        selectedPiece?.id === piece.id ? 'border-pink-500 scale-105 shadow-lg' : 'border-pink-200'
+      }`}
+      style={{
+        aspectRatio: '2/3',  // ← CHANGED: Match your image ratio
+        backgroundImage: `url(${puzzleImage})`,
+        backgroundSize: '400%',
+        backgroundPosition: `${(piece.correctPosition % 4) * 33.33}% ${Math.floor(piece.correctPosition / 4) * 33.33}%`
+      }}
+    >
+    </div>
+  ))}
+</div>
               <p className="text-center mt-6 text-gray-600">
                 {selectedPiece ? "Now click another piece to swap!" : "Click a piece to start"}
               </p>
@@ -495,11 +494,9 @@ function App() {
                   Hidden Message Unlocked! 💌
                 </h3>
                 <p className="text-xl text-gray-700 leading-relaxed mb-6">
-                  "Every piece of my life makes sense when you're in it. 
-                  You complete me in ways I never knew I needed. 
-                  Thank you for being my missing piece. 💕"
+                  "Happy Anniversary Baby Boo 💕"
                 </p>
-                <p className="text-gray-500 italic">- Love, Me</p>
+                <p className="text-gray-500 italic">- from, Grace's Nwoke</p>
               </div>
               <button
                 onClick={() => {
@@ -537,7 +534,7 @@ function App() {
         <div className="max-w-7xl mx-auto px-4 py-16">
           <div className="text-center mb-16">
             <Camera className="w-16 h-16 text-pink-500 mx-auto mb-4" />
-            <h2 className="text-4xl font-bold text-gray-800 mb-4">Our Polaroid Collection</h2>
+            <h2 className="text-4xl font-bold text-gray-800 mb-4">A Small Collection of memories</h2>
             <p className="text-gray-600 text-lg">Moments captured, memories cherished 📸</p>
           </div>
 
@@ -554,10 +551,10 @@ function App() {
                 <div className="bg-white p-4 pb-16 shadow-2xl rounded-sm">
                   <div className="relative overflow-hidden bg-gray-200" style={{paddingBottom: '100%'}}>
                     <img
-                      src={photo.url}
-                      alt={photo.caption}
-                      className="absolute inset-0 w-full h-full object-cover"
-                    />
+  src={photo.url}
+  alt={photo.caption}
+  className="absolute inset-0 w-full h-full object-contain"
+/>
                   </div>
                   <p className="text-center mt-4 text-gray-700 text-lg">
                     {photo.caption}
@@ -625,18 +622,18 @@ function App() {
           <div className="text-center mb-8">
             <MessageCircle className="w-16 h-16 text-pink-500 mx-auto mb-4" />
             <h2 className="text-4xl font-bold text-gray-800 mb-4">Chat With Me 💬</h2>
-            <p className="text-gray-600 text-lg">Ask me anything about us, our memories, or how I feel!</p>
+            <p className="text-gray-600 text-lg">Hi baby boo!</p>
           </div>
 
           <div className="bg-white rounded-3xl shadow-xl border-4 border-pink-200 overflow-hidden flex flex-col" style={{height: '600px'}}>
             <div className="flex-1 overflow-y-auto p-6 space-y-4">
               {chatMessages.length === 0 ? (
                 <div className="text-center text-gray-500 mt-20">
-                  <p className="mb-4">👋 Hi! Ask me questions like:</p>
+                  <p className="mb-4">👋 Hi baby boo! you can ask me the following questionss:</p>
                   <div className="space-y-2 text-sm">
                     <p className="bg-pink-50 inline-block px-4 py-2 rounded-full">"What's your favorite memory?"</p>
                     <br />
-                    <p className="bg-pink-50 inline-block px-4 py-2 rounded-full">"Why do you love me?"</p>
+                    <p className="bg-pink-50 inline-block px-4 py-2 rounded-full">"What was your favorite date"</p>
                     <br />
                     <p className="bg-pink-50 inline-block px-4 py-2 rounded-full">"What was your first impression?"</p>
                   </div>
@@ -778,7 +775,7 @@ function App() {
       <div className="min-h-screen bg-gradient-to-br from-amber-50 via-pink-50 to-rose-50">
         <nav className="bg-white shadow-md sticky top-0 z-50 border-b-2 border-pink-200">
           <div className="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-            <h1 className="text-2xl font-bold bg-gradient-to-r from-pink-500 to-rose-500 bg-clip-text text-transparent">Letters I Never Sent</h1>
+            <h1 className="text-2xl font-bold bg-gradient-to-r from-pink-500 to-rose-500 bg-clip-text text-transparent">Letters</h1>
             <button
               onClick={() => setCurrentPage('timeline')}
               className="px-4 py-2 text-gray-700 hover:text-pink-500 transition-colors font-medium"
@@ -791,8 +788,8 @@ function App() {
         <div className="max-w-4xl mx-auto px-4 py-16">
           <div className="text-center mb-16">
             <Heart className="w-16 h-16 text-pink-500 mx-auto mb-4" />
-            <h2 className="text-4xl font-bold text-gray-800 mb-4">Words From My Heart</h2>
-            <p className="text-gray-600 text-lg">Things I needed you to know</p>
+            <h2 className="text-4xl font-bold text-gray-800 mb-4">Words From Grace's Nwoke</h2>
+            <p className="text-gray-600 text-lg">For you and you alone</p>
           </div>
 
           <div className="grid gap-8">
@@ -843,8 +840,8 @@ function App() {
               </p>
               
               <div className="mt-8 text-right">
-                <p className="text-gray-600 font-serif italic">With all my love,</p>
-                <p className="text-2xl font-bold text-pink-600 mt-2">Me 💕</p>
+                <p className="text-gray-600 font-serif italic">From,</p>
+                <p className="text-2xl font-bold text-pink-600 mt-2">Grace's Nwoke 💕</p>
               </div>
             </div>
           </div>

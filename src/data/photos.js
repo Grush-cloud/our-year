@@ -1,22 +1,62 @@
 export const photoGallery = [
   {
-    url: "https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=800&h=600&fit=crop",
-    caption: "That look you give me 💕",
+    url: "/1.jpeg",
+    caption: "So happy that you were happy this day! 💕",
     rotation: -3
   },
   {
-    url: "https://images.unsplash.com/photo-1522093007474-d86e9bf7ba6f?w=800&h=600&fit=crop",
-    caption: "Adventure buddies forever",
+    url: "/2.jpeg",
+    caption: "We too fine ooo",
     rotation: 2
   },
   {
-    url: "https://images.unsplash.com/photo-1518568814500-bf0f8d125f46?w=800&h=600&fit=crop",
-    caption: "Sunset chaser #47 🌅",
+    url: "/7.jpeg",
+    caption: "Gotta test out all the lipglosses",
     rotation: -2
   },
   {
-    url: "https://images.unsplash.com/photo-1511988617509-a57c8a288659?w=800&h=600&fit=crop",
-    caption: "My favorite smile ❤️",
-    rotation: 4
+    url: "/9.jpeg",
+    caption: "Small fresh air",
+    rotation: -3
+  },
+   {
+    url: "/11.png",
+    caption: "Instagram for the win",
+    rotation: 2
+  },
+   {
+    url: "/12.png",
+    caption: "See these cute guys",
+    rotation: -2
+  },
+   {
+    url: "/22.png",
+    caption: "Pizza Date!!",
+    rotation: -3
+  },
+   {
+    url: "/33.png",
+    caption: "Just showing everyone who is taller   ",
+    rotation: 2
+  },
+   {
+    url: "/hands.png",
+    caption: "Coke and fanta fr fr",
+    rotation: -2
+  },
+   {
+    url: "/myview.png",
+    caption: "My babyyy boo",
+    rotation: -3
+  },
+   {
+    url: "/out.png",
+    caption: "You liking a place I reccommended!",
+    rotation: 2
+  },
+   {
+    url: "/pic.png",
+    caption: "Too cute",
+    rotation: -2
   }
 ];

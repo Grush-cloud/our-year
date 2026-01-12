@@ -1,29 +1,26 @@
 export const insideJokes = [
   {
     id: 1,
-    title: "The Great Pineapple Pizza Debate",
-    origin: "That first dinner when you ordered pineapple pizza",
-    date: "February 2024",
-    frequency: "Weekly",
+    title: "Achalugo (In razz Igbo accent)",
+    origin: "Started from that movie that was popular on youtube",
+    frequency: "From time to time",
     funnyRating: 5,
-    story: "You looked me dead in the eye and said 'pineapple belongs on pizza and I will die on this hill.' I knew then you were my kind of crazy."
+    story: "I think you just randomly mentioned it once or it was when it was trending on tiktok then from there i just picked it up and any day you make mention of it i just say it in that accent ACHALUGOO."
   },
   {
     id: 2,
-    title: "Wine O'Clock",
-    origin: "That time I spilled red wine on my white shirt on our first date",
-    date: "January 2024",
-    frequency: "Daily",
+    title: "But you've not tried my own brownies",
+    origin: "A story you told me",
+    frequency: "A long while ago",
     funnyRating: 5,
-    story: "I was trying so hard to be smooth and sophisticated. You laughed so hard you snorted, and that's when I fell in love."
+    story: "You mentioned something about someone that kept asking you some random questions, then i think asled you about cakes then brownies, then the line now came, 'but you've not tried my brownies' something along that, i just found it so funny and used it to tease you time and time again."
   },
   {
     id: 3,
-    title: "The Sandcastle Incident",
-    origin: "Beach trip where our masterpiece got destroyed by a dog",
-    date: "May 2024",
-    frequency: "Monthly",
+    title: "Janluary",
+    origin: "Post Village trip",
+    frequency: "Recently",
     funnyRating: 4,
-    story: "We spent TWO HOURS building it. A golden retriever demolished it in 3 seconds. We just sat there in shock, then laughed until we cried."
+    story: "As i go motherland come back, the tongue still de my mouth, i come talk Janluary, i just knew my own don finish, before i hear the end of this one it will be a whileee."
   }
 ];
