@@ -329,11 +329,7 @@ function App() {
                 </div>
                 <div className="text-gray-600 font-medium capitalize">
                   {key === 'daysTogether' ? 'Days Together' :
-                   key === 'datesCount' ? 'Dates' :
-                   key === 'milesTravel' ? 'Miles Traveled' :
                    key === 'photosTaken' ? 'Photos Taken' :
-                   key === 'insideJokes' ? 'Inside Jokes' :
-                   key === 'iLoveYous' ? 'I Love Yous' :
                    key === 'laughsShared' ? 'Laughs Shared' :
                    key}
                 </div>
