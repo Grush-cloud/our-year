@@ -371,20 +371,22 @@ function App() {
                 onClick={() => setSelectedJoke(joke)}
                 className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all cursor-pointer transform hover:scale-102 border-2 border-pink-100"
               >
-                <div className="flex justify-between items-start mb-4">
-                  <div>
-                    <h3 className="text-2xl font-bold text-gray-800 mb-2">{joke.title}</h3>
-                    
-                  </div>
-                  <div className="flex gap-2">
-                    <span className="px-3 py-1 bg-pink-100 text-pink-600 rounded-full text-sm font-medium">
-                      Used {joke.frequency}
-                    </span>
-                    <span className="px-3 py-1 bg-rose-100 text-rose-600 rounded-full text-sm font-medium">
-                      {'⭐'.repeat(joke.funnyRating)}
-                    </span>
-                  </div>
-                </div>
+                <div className="mb-4">
+  <div className="flex justify-between items-start mb-3">
+    <div className="flex-1">
+      <h3 className="text-xl md:text-2xl font-bold text-gray-800 mb-2">{joke.title}</h3>
+      <p className="text-sm text-pink-600 font-medium">{joke.date}</p>
+    </div>
+  </div>
+  <div className="flex flex-wrap gap-2">
+    <span className="px-3 py-1 bg-pink-100 text-pink-600 rounded-full text-xs md:text-sm font-medium whitespace-nowrap">
+      Used {joke.frequency}
+    </span>
+    <span className="px-3 py-1 bg-rose-100 text-rose-600 rounded-full text-xs md:text-sm font-medium">
+      {'⭐'.repeat(joke.funnyRating)}
+    </span>
+  </div>
+</div>
                 <p className="text-gray-600 leading-relaxed">{joke.origin}</p>
                 <p className="text-pink-500 font-medium mt-3">Click to read the full story →</p>
               </div>
